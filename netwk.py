@@ -1,13 +1,13 @@
 import socket
 
 # get machine ip address
-def get_machine_ip():
+def get_machine_info():
     host_name = socket.gethostname()
     ip_address = socket.gethostbyname(host_name)
     print('Host Name: {}\nIP Address: {}'.format(host_name, ip_address))
     return host_name, ip_address
 
-# host_name, ip_address = get_machine_ip()
+# host_name, ip_address = get_machine_info()
 
 
 # get ip from host name
