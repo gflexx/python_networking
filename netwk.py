@@ -1,6 +1,6 @@
 import socket
 
-# get machine ip address
+# get machine network info
 def get_machine_info():
     host_name = socket.gethostname()
     ip_address = socket.gethostbyname(host_name)
