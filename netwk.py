@@ -56,8 +56,6 @@ def find_port_service(ports, protocol):
             return None
     return socket_pair
 
-        
-
 # services = find_port_service([80, 25], 'tcp')
 # services = find_port_service([53, 69, 88], 'udp')
 # print('\n{}'.format(services))
