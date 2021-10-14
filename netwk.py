@@ -1,3 +1,4 @@
+import os 
 import socket
 
 # get machine network info
@@ -25,6 +26,38 @@ def get_remote_ip(remote_host):
     except socket.error as eror_msg:
         print('{} occured in geting {}'.format(eror_msg, r_host))
 
-# remote_ip = get_remote_ip('www.youtube.com')
+# remote_ip = get_remote_ip('www.google.com')
 
 
+# find name of service running on port
+def find_port_service(ports, protocol):
+    '''
+        checks if tcp or udp protocol 
+        used by the service on port
+    '''
+    prtcl = protocol
+    allowed = ('tcp', 'udp')
+    if prtcl not in allowed:
+        print('Unsuported protocol: {} !'.format(prtcl))
+        return None
+
+    # multidimentianal list 
+    # [[port(n)], [service(n)]]
+    socket_pair = [[],[]]
+    
+    for port in ports:
+        try:
+            service =  socket.getservbyport(port, prtcl)
+            print("Port: {} - Service: {}".format(port, service))
+            socket_pair[0].append(port)
+            socket_pair[1].append(service)
+        except socket.error as sock_err:
+            print("Error: {} in getting  port: {}".format(sock_err, port))
+            return None
+    return socket_pair
+
+        
+
+# services = find_port_service([80, 25], 'tcp')
+# services = find_port_service([53, 69, 88], 'udp')
+# print('\n{}'.format(services))
