@@ -6,3 +6,5 @@ Such as:
 get machine info: ip, hostname
 <br>
 get ip of remote host from domain name
+<br>
+get service running on port
