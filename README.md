@@ -8,3 +8,5 @@ get machine info: ip, hostname
 get ip of remote host from domain name
 <br>
 get service running on port
+<br>
+get and set socket timeout
