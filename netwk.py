@@ -68,4 +68,4 @@ def socket_timeout():
     sock.settimeout(1000)
     print('Current timeout: {}'.format(sock.gettimeout()))
 
-sock = socket_timeout()
+# sock = socket_timeout()
