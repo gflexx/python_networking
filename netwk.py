@@ -1,4 +1,3 @@
-import os 
 import socket
 
 # get machine network info
@@ -44,7 +43,7 @@ def find_port_service(ports, protocol):
     # multidimentianal list 
     # [[port(n)], [service(n)]]
     socket_pair = [[],[]]
-    
+
     for port in ports:
         try:
             service =  socket.getservbyport(port, prtcl)
@@ -59,3 +58,14 @@ def find_port_service(ports, protocol):
 # services = find_port_service([80, 25], 'tcp')
 # services = find_port_service([53, 69, 88], 'udp')
 # print('\n{}'.format(services))
+
+# get and set socket timeout
+def socket_timeout():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    print('Default timeout: {}'.format(sock.gettimeout()))
+
+    # set timeout
+    sock.settimeout(1000)
+    print('Current timeout: {}'.format(sock.gettimeout()))
+
+sock = socket_timeout()
