@@ -10,3 +10,5 @@ get ip of remote host from domain name
 get service running on port
 <br>
 get and set socket timeout
+<br>
+<h5>socket errors</h5>
