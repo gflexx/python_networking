@@ -11,4 +11,5 @@ get service running on port
 <br>
 get and set socket timeout
 <br>
-<h5>socket errors</h5>
+<h2>socket errors</h2>
+
