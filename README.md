@@ -6,7 +6,7 @@ Such as:<br>get machine info: ip, hostname
 <br>get service running on port
 <br>get and set socket timeout
 <br>
-<h2>socket errors</h2>
+<h2>Socket Errors</h2>
 Run file in terminal then provide:
 <br>Host<br>Port<br>File(txt or so)<br>
 socket_errors.py --host=python.org --port=80
